@@ -1,10 +1,13 @@
 <!doctype html>
-
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Nytherune Hub</title>
+
+  <!-- Google Font Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body { height: 100%; }
@@ -13,76 +16,65 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      font-family: 'Montserrat', sans-serif; /* Aplicando Montserrat */
       background: linear-gradient(135deg, #6c2bd9 0%, #3a0f6f 40%, #000000 100%);
-      background-color: #000000;
-      background-attachment: fixed;
-      color: #ffffff;
+      color: #fff;
       padding: 20px;
-    }.container {
-  max-width: 800px;
-  background: rgba(0,0,0,0.5);
-  border-radius: 16px;
-  padding: 32px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
-  backdrop-filter: blur(8px);
-}
+    }
+    .container {
+      max-width: 800px;
+      background: rgba(0,0,0,0.5);
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+      backdrop-filter: blur(8px);
+    }
+    h1 { font-size: 2.2rem; margin-bottom: 16px; color: #e0b3ff; }
+    p { font-size: 1rem; line-height: 1.6; margin-bottom: 24px; }
+    .dev-panel {
+      background: rgba(255,255,255,0.05);
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 24px;
+    }
+    .dev { display: flex; align-items: center; margin-bottom: 12px; }
+    .dev img { width: 50px; height: 50px; border-radius: 50%; margin-right: 12px; object-fit: cover; }
+    .dev-info { display: flex; flex-direction: column; }
+    .dev-name { font-weight: bold; font-size: 1.1rem; }
+    .dev-role { font-size: 0.85rem; opacity: 0.8; }
 
-h1 { font-size: 2.2rem; margin-bottom: 16px; color: #e0b3ff; }
-p { font-size: 1rem; line-height: 1.6; margin-bottom: 24px; }
-
-.dev-panel {
-  background: rgba(255,255,255,0.05);
-  padding: 20px;
-  border-radius: 12px;
-  margin-bottom: 24px;
-}
-.dev { display: flex; align-items: center; margin-bottom: 12px; }
-.dev img { width: 50px; height: 50px; border-radius: 50%; margin-right: 12px; object-fit: cover; }
-.dev-info { display: flex; flex-direction: column; }
-.dev-name { font-weight: bold; font-size: 1.1rem; }
-.dev-role { font-size: 0.85rem; opacity: 0.8; }
-
-.copy-btn {
-  display: inline-block;
-  padding: 14px 28px;
-  font-size: 1rem;
-  font-weight: bold;
-  color: #fff;
-  background: linear-gradient(90deg, #6c2bd9, #3a0f6f);
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
-.copy-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(108, 43, 217, 0.6);
-}
-
+    /* Botão neon */
+    .copy-btn {
+      display: inline-block;
+      padding: 14px 28px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 12px;
+      background: #6c2bd9;
+      box-shadow: 0 0 5px #6c2bd9, 0 0 10px #6c2bd9, 0 0 20px #6c2bd9, 0 0 40px #3a0f6f;
+      transition: all 0.3s ease;
+    }
+    .copy-btn:hover {
+      box-shadow: 0 0 10px #e0b3ff, 0 0 20px #e0b3ff, 0 0 30px #e0b3ff, 0 0 60px #3a0f6f;
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Nytherune Hub</h1>
-    <p>Nytherune Hub é um exploit avançado para Brookhaven no Roblox, oferecendo funcionalidades como matar jogadores, alterar o céu do jogo com skyboxes customizadas, expansão de domínio que causa glitch nos outros jogadores, geração de múltiplos jatos no centro do mapa e muito mais.</p><div class="dev-panel">
-  <div class="dev"><img src="https://i.pinimg.com/280x280_RS/99/71/f1/9971f16f6258dded537a31a00e3aab47.jpg" alt="Wx"><div class="dev-info"><span class="dev-name">Wx</span><span class="dev-role">Dono e desenvolvedor principal</span></div></div>
-  <div class="dev"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS66vnqcC3JBgfa7QYEdbv4crnUqgO0gtkQ8Q&usqp=CAU" alt="Kiwi"><div class="dev-info"><span class="dev-name">Kiwi</span><span class="dev-role">Desenvolvedor de algumas funções</span></div></div>
-  <div class="dev"><img src="https://i.pinimg.com/736x/65/0a/32/650a32ae9bdc8766c20cd18ae1b94739.jpg" alt="Luffyzada"><div class="dev-info"><span class="dev-name">Luffyzada</span><span class="dev-role">Suporte e ajudante de servers</span></div></div>
-  <div class="dev"><img src="https://media.tenor.com/puxdVojzEk0AAAAe/arceus-x.png" alt="Davi Admin"><div class="dev-info"><span class="dev-name">Davi Admin</span><span class="dev-role">Desenvolvedor de algumas funções</span></div></div>
-</div>
+    <p>Nytherune Hub é um exploit avançado para Brookhaven no Roblox, oferecendo funcionalidades como matar jogadores, alterar o céu do jogo com skyboxes customizadas, expansão de domínio que causa glitch nos outros jogadores, geração de múltiplos jatos no centro do mapa e muito mais.</p>
 
-<button class="copy-btn" onclick="copyLink()">Copiar Link do Exploit</button>
+    <div class="dev-panel">
+      <div class="dev"><img src="https://i.pinimg.com/280x280_RS/99/71/f1/9971f16f6258dded537a31a00e3aab47.jpg" alt="Wx"><div class="dev-info"><span class="dev-name">Wx</span><span class="dev-role">Dono e desenvolvedor principal</span></div></div>
+      <div class="dev"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS66vnqcC3JBgfa7QYEdbv4crnUqgO0gtkQ8Q&usqp=CAU" alt="Kiwi"><div class="dev-info"><span class="dev-name">Kiwi</span><span class="dev-role">Desenvolvedor de algumas funções</span></div></div>
+      <div class="dev"><img src="https://i.pinimg.com/736x/65/0a/32/650a32ae9bdc8766c20cd18ae1b94739.jpg" alt="Luffyzada"><div class="dev-info"><span class="dev-name">Luffyzada</span><span class="dev-role">Suporte e ajudante de servers</span></div></div>
+      <div class="dev"><img src="https://media.tenor.com/puxdVojzEk0AAAAe/arceus-x.png" alt="Davi Admin"><div class="dev-info"><span class="dev-name">Davi Admin</span><span class="dev-role">Desenvolvedor de algumas funções</span></div></div>
+    </div>
 
-  </div>  <script>
-    function copyLink() {
-      const exploitLink = 'https://scriptblox.com/script/Brookhaven-RP-Nytherune-Hub-43881';
-      navigator.clipboard.writeText(exploitLink).then(() => {
-        alert('Link do exploit copiado com sucesso!');
-      }).catch(err => {
-        alert('Falha ao copiar o link: ' + err);
-      });
-    }
-  </script></body>
+    <a class="copy-btn" href="https://scriptblox.com/script/Brookhaven-RP-Nytherune-Hub-43881" target="_blank">Abrir Página de Cópia do Link</a>
+  </div>
+</body>
 </html>
