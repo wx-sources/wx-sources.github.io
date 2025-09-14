@@ -4,56 +4,85 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Fundo Gradiente Roxo e Preto</title>
+  <title>Nytherune Hub</title>
   <style>
-    /* Layout básico e reset */
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { height: 100%; }/* Fundo gradiente roxo -> preto ocupando toda a tela */
-body {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-
-  /* Gradiente principal */
-  background: linear-gradient(135deg, #6c2bd9 0%, #3a0f6f 40%, #000000 100%);
-  /* Alternativa para navegadores antigos */
-  background-color: #000000;
-
-  /* Manter o gradiente fixo ao rolar */
-  background-attachment: fixed;
-  color: #ffffff;
-}
-
-/* Caixa de demonstração central (opcional) */
-.card {
-  background: rgba(255,255,255,0.04);
-  border-radius: 12px;
-  padding: 28px 36px;
+    html, body { height: 100%; }
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(135deg, #6c2bd9 0%, #3a0f6f 40%, #000000 100%);
+      background-color: #000000;
+      background-attachment: fixed;
+      color: #ffffff;
+      padding: 20px;
+    }.container {
+  max-width: 800px;
+  background: rgba(0,0,0,0.5);
+  border-radius: 16px;
+  padding: 32px;
   box-shadow: 0 8px 30px rgba(0,0,0,0.6);
-  backdrop-filter: blur(6px);
-  text-align: center;
-  max-width: 720px;
+  backdrop-filter: blur(8px);
 }
 
-h1 { font-size: 1.6rem; letter-spacing: -0.02em; margin-bottom: 8px; }
-p  { opacity: 0.9; }
+h1 { font-size: 2.2rem; margin-bottom: 16px; color: #e0b3ff; }
+p { font-size: 1rem; line-height: 1.6; margin-bottom: 24px; }
 
-/* Pequena animação sutil para dar vida ao fundo (opcional) */
-@keyframes pulseGradient {
-  0% { filter: hue-rotate(0deg) saturate(100%); }
-  50% { filter: hue-rotate(10deg) saturate(115%); }
-  100% { filter: hue-rotate(0deg) saturate(100%); }
+.dev-panel {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 24px;
 }
-body { animation: pulseGradient 8s ease-in-out infinite; }
+.dev { display: flex; align-items: center; margin-bottom: 12px; }
+.dev img { width: 50px; height: 50px; border-radius: 50%; margin-right: 12px; object-fit: cover; }
+.dev-info { display: flex; flex-direction: column; }
+.dev-name { font-weight: bold; font-size: 1.1rem; }
+.dev-role { font-size: 0.85rem; opacity: 0.8; }
+
+.copy-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(90deg, #6c2bd9, #3a0f6f);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.copy-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(108, 43, 217, 0.6);
+}
 
   </style>
 </head>
 <body>
-  <main class="card">
-    <h1>Fundo Gradiente Roxo → Preto</h1>
-    <p>Arquivo de exemplo com gradiente roxo e preto em tela cheia. Salve como <code>index.html</code> e abra no navegador.</p>
-  </main>
-</body>
+  <div class="container">
+    <h1>Nytherune Hub</h1>
+    <p>Nytherune Hub é um exploit avançado para Brookhaven no Roblox, oferecendo funcionalidades como matar jogadores, alterar o céu do jogo com skyboxes customizadas, expansão de domínio que causa glitch nos outros jogadores, geração de múltiplos jatos no centro do mapa e muito mais.</p><div class="dev-panel">
+  <div class="dev"><img src="https://i.pinimg.com/280x280_RS/99/71/f1/9971f16f6258dded537a31a00e3aab47.jpg" alt="Wx"><div class="dev-info"><span class="dev-name">Wx</span><span class="dev-role">Dono e desenvolvedor principal</span></div></div>
+  <div class="dev"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS66vnqcC3JBgfa7QYEdbv4crnUqgO0gtkQ8Q&usqp=CAU" alt="Kiwi"><div class="dev-info"><span class="dev-name">Kiwi</span><span class="dev-role">Desenvolvedor de algumas funções</span></div></div>
+  <div class="dev"><img src="https://i.pinimg.com/736x/65/0a/32/650a32ae9bdc8766c20cd18ae1b94739.jpg" alt="Luffyzada"><div class="dev-info"><span class="dev-name">Luffyzada</span><span class="dev-role">Suporte e ajudante de servers</span></div></div>
+  <div class="dev"><img src="https://media.tenor.com/puxdVojzEk0AAAAe/arceus-x.png" alt="Davi Admin"><div class="dev-info"><span class="dev-name">Davi Admin</span><span class="dev-role">Desenvolvedor de algumas funções</span></div></div>
+</div>
+
+<button class="copy-btn" onclick="copyLink()">Copiar Link do Exploit</button>
+
+  </div>  <script>
+    function copyLink() {
+      const exploitLink = 'https://link-do-exploit.com';
+      navigator.clipboard.writeText(exploitLink).then(() => {
+        alert('Link do exploit copiado com sucesso!');
+      }).catch(err => {
+        alert('Falha ao copiar o link: ' + err);
+      });
+    }
+  </script></body>
 </html>
