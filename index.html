@@ -1,0 +1,59 @@
+<!doctype html>
+
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Fundo Gradiente Roxo e Preto</title>
+  <style>
+    /* Layout básico e reset */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }/* Fundo gradiente roxo -> preto ocupando toda a tela */
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+
+  /* Gradiente principal */
+  background: linear-gradient(135deg, #6c2bd9 0%, #3a0f6f 40%, #000000 100%);
+  /* Alternativa para navegadores antigos */
+  background-color: #000000;
+
+  /* Manter o gradiente fixo ao rolar */
+  background-attachment: fixed;
+  color: #ffffff;
+}
+
+/* Caixa de demonstração central (opcional) */
+.card {
+  background: rgba(255,255,255,0.04);
+  border-radius: 12px;
+  padding: 28px 36px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
+  text-align: center;
+  max-width: 720px;
+}
+
+h1 { font-size: 1.6rem; letter-spacing: -0.02em; margin-bottom: 8px; }
+p  { opacity: 0.9; }
+
+/* Pequena animação sutil para dar vida ao fundo (opcional) */
+@keyframes pulseGradient {
+  0% { filter: hue-rotate(0deg) saturate(100%); }
+  50% { filter: hue-rotate(10deg) saturate(115%); }
+  100% { filter: hue-rotate(0deg) saturate(100%); }
+}
+body { animation: pulseGradient 8s ease-in-out infinite; }
+
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>Fundo Gradiente Roxo → Preto</h1>
+    <p>Arquivo de exemplo com gradiente roxo e preto em tela cheia. Salve como <code>index.html</code> e abra no navegador.</p>
+  </main>
+</body>
+</html>
