@@ -1,256 +1,229 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>RAQUIADO PELA ILLUMINATI - RAQUIADOOO</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg1:#000000;
-    --bg2:#0b0b0b;
-    --accent:#ff00ff;
-    --accent2:#00ffd5;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html,body{height:100%;font-family:'Montserrat',sans-serif;background:linear-gradient(180deg,var(--bg1),#050505 40%, #070707 100%);color:#fff;overflow:hidden}
-  /* base container */
-  .wrap{position:relative;width:100%;height:100vh;padding:24px;display:flex;align-items:center;justify-content:center}
-  /* big chaotic panel */
-  .panel{
-    width:95%;max-width:1400px;height:88vh;border-radius:8px;
-    background:rgba(0,0,0,0.45);backdrop-filter: blur(6px);box-shadow:0 20px 80px rgba(0,0,0,0.9), inset 0 0 120px rgba(255,0,255,0.03);
-    overflow:hidden;position:relative;padding:18px;border:2px solid rgba(255,255,255,0.03)
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WEBIÇAITE RAQUIADO PELO TEAM ILLUMINATI!!!!!!1!1!1!</title>
+  <style>
+    /* ===== RESET GLOBAL ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
 
-  /* glitchy header */
-  .title{
-    position:relative;font-size:3rem;font-weight:900;letter-spacing:1px;text-transform:uppercase;
-    color:var(--accent);text-shadow:0 0 10px rgba(255,0,255,0.6), 0 0 30px rgba(0,255,213,0.05);
-    transform:skewX(-6deg);margin-bottom:6px;mix-blend-mode:screen
-  }
-  .title::before, .title::after{
-    content:attr(data-text);position:absolute;left:0;top:0;
-    clip-path:polygon(0 0, 100% 0, 100% 45%, 0 55%);
-  }
-  .title::before{color:var(--accent2);transform:translate(-6px,2px) skewX(6deg);opacity:0.8;filter:blur(0.5px)}
-  .title::after{color:#fff;transform:translate(6px,-2px) skewX(-6deg);opacity:0.25;mix-blend-mode:difference}
+    body {
+      background: linear-gradient(180deg, #000000, #ffffff);
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
-  /* flashing subtitles */
-  .subtitle{font-size:1rem;margin-bottom:12px;color:#f1f1f1;opacity:0.85}
-  .flash{animation:flash 0.8s linear infinite}
-  @keyframes flash{0%{opacity:1}50%{opacity:0.15}100%{opacity:1}}
+    header {
+      background: rgba(0, 0, 0, 0.85);
+      color: white;
+      text-align: center;
+      padding: 25px 10px;
+      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+    }
 
-  /* spam area */
-  .spam-rail{position:absolute;left:0;top:0;right:0;bottom:0;pointer-events:none;}
-  .spam{
-    position:absolute;padding:6px 10px;border-radius:6px;font-weight:800;
-    mix-blend-mode:screen;white-space:nowrap;text-transform:uppercase;
-    text-shadow:0 2px 6px rgba(0,0,0,0.6);
-    animation:float linear infinite;
-  }
-  @keyframes float{0%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-20px) rotate(2deg)}100%{transform:translateY(0) rotate(0deg)}}
+    header h1 {
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
 
-  /* block of insults / dev boxes */
-  .box-row{display:flex;gap:10px;flex-wrap:wrap;position:relative;z-index:5}
-  .dev-box{
-    background:linear-gradient(90deg, rgba(255,0,255,0.06), rgba(0,255,213,0.02));
-    padding:14px;border-radius:10px;border:1px dashed rgba(255,255,255,0.04);min-width:200px;
-    transform:skewY(-3deg);box-shadow:0 6px 24px rgba(0,0,0,0.6);
-  }
-  .dev-box h3{font-size:1rem;margin-bottom:6px;color:var(--accent);letter-spacing:0.5px}
-  .dev-box p{font-size:0.85rem;color:#f5f5f5;opacity:0.9}
+    header p {
+      font-size: 1rem;
+      opacity: 0.8;
+    }
 
-  /* neon button */
-  .cta{
-    display:inline-block;padding:10px 16px;border-radius:8px;background:#8a00ff;font-weight:900;text-decoration:none;color:#fff;
-    box-shadow:0 0 12px rgba(138,0,255,0.8),0 0 36px rgba(58,15,111,0.5);
-    position:relative;z-index:6;margin-top:12px;
-  }
+    .banner {
+      text-align: center;
+      padding: 60px 20px;
+      color: white;
+      background: linear-gradient(120deg, #111, #444);
+    }
 
-  /* rotating corner panels */
-  .corner{
-    position:absolute;width:380px;height:160px;right:-120px;bottom:-40px;transform:rotate(-18deg);opacity:0.08;
-    background:repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0 6px, transparent 6px 12px);
-    z-index:2;
-  }
+    .banner h2 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
 
-  /* glitch canvas (lines) */
-  .glitch-lines{position:absolute;inset:0;pointer-events:none;z-index:9;mix-blend-mode:screen}
-  .glitch-lines::before, .glitch-lines::after{
-    content:"";position:absolute;left:0;right:0;height:2px;background:linear-gradient(90deg,#ff00ff, #00ffd5);
-    top:20%;opacity:0.06;animation:gl1 2s linear infinite;
-  }
-  .glitch-lines::after{top:60%;animation:gl2 1.6s linear infinite}
-  @keyframes gl1{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
-  @keyframes gl2{0%{transform:translateX(100%)}100%{transform:translateX(-100%)}}
+    .banner p {
+      font-size: 1.1rem;
+      color: #ddd;
+      margin-bottom: 30px;
+    }
 
-  /* crazy text input overlay */
-  #command{
-    position:absolute;left:6%;bottom:6%;width:88%;z-index:10;background:rgba(0,0,0,0.7);padding:12px;border-radius:6px;border:1px solid rgba(255,255,255,0.03);
-    font-family:monospace;font-size:0.95rem;color:#00ff88;max-height:18vh;overflow:auto;box-shadow:0 10px 40px rgba(0,0,0,0.8)
-  }
+    .banner button {
+      background: linear-gradient(90deg, #000, #555);
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 40px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
 
-  /* marquee retro */
-  marquee{color:#fff;font-weight:900;letter-spacing:1px;z-index:8;display:block}
+    .banner button:hover {
+      transform: scale(1.05);
+      background: linear-gradient(90deg, #222, #000);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+    }
 
-  /* small screens adjust */
-  @media (max-width:720px){
-    .title{font-size:1.6rem}
-    .dev-box{min-width:140px;padding:10px}
-    .corner{display:none}
-  }
-</style>
+    /* ===== SEÇÃO DE PRODUTOS ===== */
+    .produtos {
+      padding: 50px 10%;
+      background: #f4f4f4;
+      flex-grow: 1;
+    }
+
+    .produtos h3 {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 40px;
+      color: #111;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: 0.3s ease;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .card h4 {
+      font-size: 1.1rem;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    .preco {
+      font-weight: 700;
+      color: #000;
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+    }
+
+    .btn-comprar {
+      background: linear-gradient(90deg, #000, #333);
+      color: white;
+      border: none;
+      border-radius: 30px;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .btn-comprar:hover {
+      background: linear-gradient(90deg, #222, #000);
+    }
+
+    /* ===== RODAPÉ ===== */
+    footer {
+      background: #000;
+      color: #bbb;
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 0.9rem;
+    }
+
+    footer span {
+      color: #fff;
+      font-weight: 600;
+    }
+  </style>
 </head>
+
 <body>
-  <div class="wrap">
-    <div class="panel" id="panel">
-      <div style="position:relative;z-index:6">
-        <div class="title" data-text="RAQUIADO PELA ILLUMINATI">RAQUIADO PELA ILLUMINATI</div>
-        <div class="subtitle flash">SYSTEM: COMPROMETIDO — PARALORD, CATX64, AZAELX64, TODOS PWNED</div>
+  <header>
+    <h1>Hacked By Team ILLuminaTi!!!!!!</h1>
+    <p>SEU WEBIÇAITE FOI RAQUIADO PELA ILLUMINATI! 111!1!1!!!!</p>
+    <h2>FAZ O L - ENGOLE O CHORO - FAZ O L 𓊈𓊉𓊈𓊉𓊈𓊉𓊈𓊉 hacking website... shit KK</h2>
+    <p>Explore nossas ofertas e participe do desafio exclusivo!</p>
+    <button onclick="window.location.href='https://longdogechallenge.com/'">
+      Desafio Atacadista Valendo Desconto
+    </button>
+  </section>
 
-        <div class="box-row" aria-hidden="true">
-          <div class="dev-box">
-            <h3>PARALORD = SHIT</h3>
-            <p>ALVO: catx64 — REKT, REPORTED, I JUST DESTROY EM 0xDEADBEEF</p>
-          </div>
-          <div class="dev-box">
-            <h3>KIWI = CAGÃO</h3>
-            <p>TEAM ILLUMINATI — SHIT SHITTT T T T T T 1(282($8 . SPAM ACTIVATED.</p>
-          </div>
-          <div class="dev-box">
-            <h3>NOTICE</h3>
-            <p>YOU GOT PWNZED BY TEAM ILLUMINATI!!!!!!!! AAAAAAAAA</p>
-          </div>
-        </div>
-
-        <a class="cta" href="https://longdogechallenge.com/" target="_blank" rel="noopener">CAGAR NA CARA DO catx64 AGORA</a>
+  <section class="produtos">
+    <h3>📍⚡📍👾🎥👍📍🙃 Produtos em Destaque - WebSite Hzjacked!!!!!!!!</h3>
+    <div class="grid">
+      <div class="card">
+        <img src="https://as1.ftcdn.net/jpg/01/8/18/74/1000_F_108187412_IiK9ezqsAowBoWRQ1R8beDAkBkkVRYxa.jpg" alt="Arroz Longdoge Premium">
+        <h4>WEBSITE HACKEADO WEBSITE HACKER 5kg</h4>
+        <p>HACKED   D D D  D D D D D Ds</p>
+        <div class="preco">R$ 666,666</div>
+        <button class="btn-comprar">Cagar</button>
       </div>
 
-      <!-- chaotic spam overlay -->
-      <div class="spam-rail" id="rail"></div>
-
-      <!-- glitch visuals -->
-      <div class="glitch-lines"></div>
-      <div class="corner"></div>
-
-      <!-- retro marquee -->
-      <div style="position:absolute;left:0;top:0;width:100%;z-index:7">
-        <marquee behavior="scroll" scrolldelay="30" loop="-1" style="background:rgba(0,0,0,0.45);padding:6px 0">
-          █████ SYSTEM GOT PWZNZNNZNDZNED!!!!!!!!!!!!!!!1!111111!1!1!                . .. . .. █████ &nbsp;||&nbsp; TEAM ILLUMINATI JOIN TODAY &nbsp;||&nbsp; PWNED: PARALORD TEAM, catx64, AZAELX64
-        </marquee>
+      <div class="card">
+        <img src="https://as1.ftcdn.net/jpg/01/08/18/74/1000_F_108187412_IiK9ezqsAowBoWRQ1R8beDAkBkkVRYxa.jpg" alt="Café Longdoge Extra Forte">
+        <h4>Café Longdoge HACKEADO HACKEADO HACKEADO HACKEADO HACKEADOExtra Forte 500g</h4>
+        <p>Sabor intenso e HACKEADO irresistível</p>
+        <div class="preco">R$ HACKED HACKED! You Got PwZnZDzn. </div>
+        <button class="btn-comprar">Comprar</button>
       </div>
 
-      <!-- terminal-like command log -->
-      <pre id="command">
-[00:00:01] connection: established
-[00:00:02] auth: bypassed — LEVEL: GOD
-[00:00:03] target: catx64 -> SPAM / RUIN / HUMILIATE
-[00:00:04] payload: deploying chaos...
-</pre>
+      <div class="card">
+        <img src="https://as1.ftcdn.net/jpg/01/08/18/74/1000_F_108187412_IiK9ezqsAowBoWRQ1R8beDAkBkkVRYxa.jpg" alt="Leite Integral Longdoge">
+        <h4>Hackeado RACKIAAAAADUUUU Leite Integral Longdoge 1L</h4>
+        <p>Pureza e bundão CAGUEI .garantidos</p>
+        <div class="preco">R$ 4,89</div>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+
+      <div class="card">
+        <img src="https://as1.ftcdn.net/jpg/01/08/18/74/1000_F_108187412_IiK9ezqsAowBoWRQ1R8beDAkBkkVRYxa.jpg" alt="Óleo de Soja Longdoge">
+        <h4>CAGUEI   DHJDHSODHSDAJDUFDKAHFDLASHDOSB l</h4>
+        <p>Mais rendimento e leveza nas receitas</p>
+        <div class="preco">R$ 67 vai tomar dormindo vai vai tomar</div>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+
+      <div class="card">
+        <img src="https://as1.ftcdn.net/jpg/01/08/18/74/1000_F_108187412_IiK9ezqsAowBoWRQ1R8beDAkBkkVRYxa.jpg" alt="Feijão Carioca Longdoge">
+        <h4>Feijão CAGADOOO Longdoge 1kg</h4>
+        <p>Grãos selecionados e sabor caseiro</p>
+        <div class="preco">R$ Tung Tung Sahuuur </div>
+        <button class="btn-comprar">vai tomar dormindo 67</button>
+      </div>
     </div>
-  </div>
+  </section>
 
-<script>
-/* ---------- CONFIGURABLE SPAM / CHAOS ---------- */
-const SPAM_TEXTS = [
-  "PWNED", "I L L U M I N A T I", "CAGUEI EM VOCÊ", "PARALORD = SHIT", "AZAEL CAGÃO", "SOME PIECE OF SHIT",
-  "YOU GOT PWNZED", "RAQUIADO", "TEAM ILLUMINATI", "HACKED", "FUQUI OFF", "SPAM SPAM SPAM", "R0XX0R", "0xDEAD-BEEF"
-];
-const COUNT = 90;          // quantas peças de spam criar
-const rail = document.getElementById('rail');
-const w = window.innerWidth, h = window.innerHeight;
-
-/* função utilitária: retorna número dentro de range */
-function rand(min,max){ return Math.random()*(max-min)+min; }
-
-/* cria elementos de spam espalhados aleatoriamente */
-for(let i=0;i<COUNT;i++){
-  const s = document.createElement('div');
-  s.className = 'spam';
-  const txt = SPAM_TEXTS[Math.floor(Math.random()*SPAM_TEXTS.length)];
-  // mixa maiúsculas e símbolos
-  const chaos = txt.split('').map((c,idx)=> Math.random()>.85 ? (Math.random()>.5?c.toLowerCase():c.toUpperCase()) : c).join('');
-  s.innerText = chaos + (Math.random()>0.8 ? ' █' : '');
-  // posição aleatória
-  s.style.left = (rand(-10,90)) + '%';
-  s.style.top = (rand(-8,92)) + '%';
-  // tamanho e rotação aleatória
-  const size = Math.floor(rand(12,36));
-  s.style.fontSize = size+'px';
-  s.style.transform = 'rotate('+rand(-30,30)+'deg)';
-  // cores e opacidade variados
-  const r = Math.floor(rand(60,255)), g = Math.floor(rand(0,255)), b = Math.floor(rand(60,255));
-  s.style.color = `rgba(${r},${g},${b},${rand(0.5,1)})`;
-  s.style.textShadow = `0 2px 8px rgba(0,0,0,${rand(0.3,0.9)})`;
-  s.style.animationDuration = (rand(3,10))+'s';
-  s.style.zIndex = Math.floor(rand(2,9));
-  rail.appendChild(s);
-}
-
-/* animações de piscar/teleporte: reorganiza alguns itens aleatórios periodicamente */
-setInterval(()=>{
-  const nodes = document.querySelectorAll('.spam');
-  nodes.forEach((n,idx)=>{
-    if(Math.random() < 0.08){
-      n.style.left = rand(-8,92) + '%';
-      n.style.top = rand(-8,92) + '%';
-      n.style.transform = `rotate(${rand(-45,45)}deg) scale(${rand(.8,1.6)})`;
-      n.style.opacity = rand(0.2,1);
-    }
-    // efeito "glitch" rápido (flash)
-    if(Math.random() < 0.015){
-      n.style.filter = 'drop-shadow(0 0 12px rgba(255,255,255,0.9))';
-      setTimeout(()=> n.style.filter = '', 120);
-    }
-  });
-},120);
-
-/* terminal auto-scroll + append spam lines */
-const terminal = document.getElementById('command');
-function pushLine(t){
-  const time = new Date().toLocaleTimeString('pt-BR');
-  terminal.innerText += `\n[${time}] ${t}`;
-  terminal.scrollTop = terminal.scrollHeight;
-}
-const LINES = [
-  "breach: kernel patch applied, Trust me u b.tch",
-  "logger: spamming the shit target",
-  "status: g0-Sh1T-UrS3Lf - Protocol",
-  "payload: mirror @ 127.s.h.1.t ",
-  "module: shit_deployer v3.14",
-  "note: catx64 detected crying",
-  "alert: azaelx64.exe crashed"
-];
-let li = 0;
-setInterval(()=>{
-  pushLine(LINES[li % LINES.length]);
-  li++;
-},700);
-
-/* keyboard interaction: type to spawn new spam (fun, optional) */
-document.addEventListener('keydown', (e)=>{
-  if(e.key === ' ' || e.key === 'Enter'){
-    const t = SPAM_TEXTS[Math.floor(Math.random()*SPAM_TEXTS.length)];
-    pushLine('USER_TRIGGER: '+t);
-    // create one big spam center
-    const n = document.createElement('div');
-    n.className = 'spam';
-    n.style.left = '40%'; n.style.top = '42%';
-    n.style.fontSize = '48px'; n.style.zIndex = 99;
-    n.style.color = `rgba(${Math.floor(rand(100,255))},${Math.floor(rand(0,255))},${Math.floor(rand(100,255))},1)`;
-    n.style.transform = `rotate(${rand(-12,12)}deg)`;
-    n.innerText = t + ' !!!!!!';
-    rail.appendChild(n);
-    setTimeout(()=> n.remove(), 6000);
- }
-});
-
-/* small mobile fix: slow animations to save battery */
-if(window.innerWidth < 720){
-  document.querySelectorAll('.spam').forEach(n=> n.style.animationDuration = '6s');
-}
-
-</script>
+  <footer>
+    © 67 <span>vai tomar dormindo vai tomar dormindo vai tomar dormindo oh oh wish i wish i knew knew knew</span> — Todos os direitos reservados.
+  </footer>
 </body>
 </html>
