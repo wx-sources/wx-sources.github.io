@@ -1,229 +1,82 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WEBIÇAITE RAQUIADO PELO TEAM ILLUMINATI!!!!!!1!1!1!</title>
-  <style>
-    /* ===== RESET GLOBAL ===== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Poppins", sans-serif;
-    }
-
-    body {
-      background: linear-gradient(180deg, #000000, #ffffff);
-      color: #222;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    header {
-      background: rgba(0, 0, 0, 0.85);
-      color: white;
-      text-align: center;
-      padding: 25px 10px;
-      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
-    }
-
-    header h1 {
-      font-size: 2rem;
-      letter-spacing: 1px;
-    }
-
-    header p {
-      font-size: 1rem;
-      opacity: 0.8;
-    }
-
-    .banner {
-      text-align: center;
-      padding: 60px 20px;
-      color: white;
-      background: linear-gradient(120deg, #111, #444);
-    }
-
-    .banner h2 {
-      font-size: 2.2rem;
-      margin-bottom: 10px;
-    }
-
-    .banner p {
-      font-size: 1.1rem;
-      color: #ddd;
-      margin-bottom: 30px;
-    }
-
-    .banner button {
-      background: linear-gradient(90deg, #000, #555);
-      color: white;
-      border: none;
-      padding: 15px 30px;
-      font-size: 1rem;
-      font-weight: 600;
-      border-radius: 40px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .banner button:hover {
-      transform: scale(1.05);
-      background: linear-gradient(90deg, #222, #000);
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
-    }
-
-    /* ===== SEÇÃO DE PRODUTOS ===== */
-    .produtos {
-      padding: 50px 10%;
-      background: #f4f4f4;
-      flex-grow: 1;
-    }
-
-    .produtos h3 {
-      text-align: center;
-      font-size: 1.8rem;
-      margin-bottom: 40px;
-      color: #111;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
-    }
-
-    .card {
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      transition: 0.3s ease;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    }
-
-    .card img {
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
-      border-radius: 10px;
-      margin-bottom: 15px;
-    }
-
-    .card h4 {
-      font-size: 1.1rem;
-      color: #333;
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      font-size: 0.9rem;
-      color: #666;
-      margin-bottom: 10px;
-    }
-
-    .preco {
-      font-weight: 700;
-      color: #000;
-      font-size: 1.1rem;
-      margin-bottom: 15px;
-    }
-
-    .btn-comprar {
-      background: linear-gradient(90deg, #000, #333);
-      color: white;
-      border: none;
-      border-radius: 30px;
-      padding: 10px 20px;
-      cursor: pointer;
-      transition: 0.3s ease;
-    }
-
-    .btn-comprar:hover {
-      background: linear-gradient(90deg, #222, #000);
-    }
-
-    /* ===== RODAPÉ ===== */
-    footer {
-      background: #000;
-      color: #bbb;
-      text-align: center;
-      padding: 20px 10px;
-      font-size: 0.9rem;
-    }
-
-    footer span {
-      color: #fff;
-      font-weight: 600;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — ScriptHub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<body class="bg-gradient-to-br from-black via-gray-900 to-gray-800 text-white min-h-screen flex flex-col items-center justify-center font-sans transition-all duration-500">
 
-<body>
-  <header>
-    <h1>Hacked By Team ILLuminaTi!!!!!!</h1>
-    <p>SEU WEBIÇAITE FOI RAQUIADO PELA ILLUMINATI! 111!1!1!!!!</p>
-    <h2>FAZ O L - ENGOLE O CHORO - FAZ O L 𓊈𓊉𓊈𓊉𓊈𓊉𓊈𓊉 hacking website... shit KK</h2>
-    <p>Team Paralord Não chega perto, viu azael, catx64 !</p>
-    <button onclick="window.location.href='https://longdogechallenge.com/'">
-      TEAM PARALORD É UMA MERDA
-    </button>
-  </section>
+  <!-- Container Principal -->
+  <div id="dashboard" class="w-full max-w-4xl bg-gray-900/70 backdrop-blur-xl rounded-2xl shadow-2xl p-6">
+    <!-- Cabeçalho -->
+    <div class="flex justify-between items-center border-b border-gray-700 pb-4 mb-4">
+      <h1 class="text-3xl font-bold tracking-tight">ScriptHub Dashboard</h1>
+      <button id="uploadBtn" class="px-5 py-2 bg-indigo-600 hover:bg-indigo-700 rounded-lg font-semibold transition-all duration-300">Fazer Upload do Script</button>
+    </div>
 
-  <section class="produtos">
-    <h3>📍⚡📍👾🎥👍📍🙃 Produtos em Destaque - WebSite Hzjacked!!!!!!!!</h3>
-    <div class="grid">
-      <div class="card">
-        <img src="https://as1.ftcdn.net/jpg/01/8/18/74/1000_F_108187412_IiK9ezqsAowBoWRQ1R8beDAkBkkVRYxa.jpg" alt="Arroz Longdoge Premium">
-        <h4>WEBSITE HACKEADO WEBSITE HACKER 5kg</h4>
-        <p>HACKED   D D D  D D D D D Ds</p>
-        <div class="preco">R$ 666,666</div>
-        <button class="btn-comprar">Cagar</button>
+    <!-- Tabs -->
+    <div class="flex space-x-4 mb-6">
+      <button id="tabScripts" class="tab-btn text-lg font-medium text-white border-b-2 border-indigo-500 pb-1">Scripts</button>
+      <button id="tabKeys" class="tab-btn text-lg font-medium text-gray-400 hover:text-white transition-all duration-300">Keys</button>
+    </div>
+
+    <!-- Conteúdo Scripts -->
+    <div id="scriptsContent" class="space-y-4">
+      <div class="p-4 bg-gray-800 rounded-xl shadow-inner">
+        <h2 class="text-xl font-semibold">Meus Scripts</h2>
+        <p class="text-gray-400">Nenhum script publicado ainda.</p>
       </div>
-
-      <div class="card">
-        <img src="https://as1.ftcdn.net/jpg/01/08/18/74/1000_F_108187412_IiK9ezqsAowBoWRQ1R8beDAkBkkVRYxa.jpg" alt="Café Longdoge Extra Forte">
-        <h4>Café Longdoge HACKEADO HACKEADO HACKEADO HACKEADO HACKEADOExtra Forte 500g</h4>
-        <p>Sabor intenso e HACKEADO irresistível</p>
-        <div class="preco">R$ HACKED HACKED! You Got PwZnZDzn. </div>
-        <button class="btn-comprar">Comprar</button>
-      </div>
-
-      <div class="card">
-        <img src="https://as1.ftcdn.net/jpg/01/08/18/74/1000_F_108187412_IiK9ezqsAowBoWRQ1R8beDAkBkkVRYxa.jpg" alt="Leite Integral Longdoge">
-        <h4>Hackeado RACKIAAAAADUUUU Leite Integral Longdoge 1L</h4>
-        <p>Pureza e bundão CAGUEI .garantidos</p>
-        <div class="preco">R$ 4,89</div>
-        <button class="btn-comprar">Comprar</button>
-      </div>
-
-      <div class="card">
-        <img src="https://as1.ftcdn.net/jpg/01/08/18/74/1000_F_108187412_IiK9ezqsAowBoWRQ1R8beDAkBkkVRYxa.jpg" alt="Óleo de Soja Longdoge">
-        <h4>CAGUEI   DHJDHSODHSDAJDUFDKAHFDLASHDOSB l</h4>
-        <p>Mais rendimento e leveza nas receitas</p>
-        <div class="preco">R$ 67 vai tomar dormindo vai vai tomar</div>
-        <button class="btn-comprar">Comprar</button>
-      </div>
-
-      <div class="card">
-        <img src="https://as1.ftcdn.net/jpg/01/08/18/74/1000_F_108187412_IiK9ezqsAowBoWRQ1R8beDAkBkkVRYxa.jpg" alt="Feijão Carioca Longdoge">
-        <h4>Feijão CAGADOOO Longdoge 1kg</h4>
-        <p>Grãos selecionados e sabor caseiro</p>
-        <div class="preco">R$ Tung Tung Sahuuur </div>
-        <button class="btn-comprar">vai tomar dormindo 67</button>
+      <div class="p-4 bg-gray-800 rounded-xl shadow-inner">
+        <h2 class="text-xl font-semibold">Explorar</h2>
+        <ul class="text-gray-300 space-y-1">
+          <li>• Script de movimento rápido</li>
+          <li>• Script de brilho extremo</li>
+          <li>• Script de animações caóticas</li>
+        </ul>
       </div>
     </div>
-  </section>
 
-  <footer>
-    © 67 <span>vai tomar dormindo vai tomar dormindo vai tomar dormindo oh oh wish i wish i knew knew knew</span> — Todos os direitos reservados.
-  </footer>
+    <!-- Conteúdo Keys (inativo) -->
+    <div id="keysContent" class="hidden">
+      <p class="text-gray-400 text-center py-8">A aba de Keys ainda não está funcionando.</p>
+    </div>
+  </div>
+
+  <!-- Texto final -->
+  <div id="endMessage" class="hidden text-center text-3xl font-bold">PARABÉNS, NÃO TERMINEI O SITE</div>
+
+  <script>
+    const uploadBtn = document.getElementById("uploadBtn");
+    const dashboard = document.getElementById("dashboard");
+    const endMessage = document.getElementById("endMessage");
+    const tabScripts = document.getElementById("tabScripts");
+    const tabKeys = document.getElementById("tabKeys");
+    const scriptsContent = document.getElementById("scriptsContent");
+    const keysContent = document.getElementById("keysContent");
+
+    // Botão de upload — troca toda a tela
+    uploadBtn.addEventListener("click", () => {
+      dashboard.classList.add("hidden");
+      endMessage.classList.remove("hidden");
+    });
+
+    // Tabs
+    tabScripts.addEventListener("click", () => {
+      tabScripts.classList.add("border-indigo-500", "text-white");
+      tabKeys.classList.remove("border-indigo-500");
+      scriptsContent.classList.remove("hidden");
+      keysContent.classList.add("hidden");
+    });
+
+    tabKeys.addEventListener("click", () => {
+      tabKeys.classList.add("border-indigo-500", "text-white");
+      tabScripts.classList.remove("border-indigo-500");
+      scriptsContent.classList.add("hidden");
+      keysContent.classList.remove("hidden");
+    });
+  </script>
+
 </body>
 </html>
