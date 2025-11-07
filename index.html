@@ -1,82 +1,142 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard — ScriptHub</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wx — Fundo Moderno</title>
+  <meta name="description" content="Site com fundo moderno e título solicitado por Wx." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-1: #0f1226;  /* base escura */
+      --bg-2: #14183b;  /* variação */
+      --accent-1: #7c5cff; /* roxo */
+      --accent-2: #00e0ff; /* ciano */
+      --accent-3: #ff6b6b; /* coral */
+      --glass: rgba(255, 255, 255, 0.08);
+      --glass-border: rgba(255, 255, 255, 0.18);
+    }* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  color: #fff;
+  background: radial-gradient(1200px 800px at 10% 10%, #1a1f47 0%, transparent 60%),
+              radial-gradient(900px 700px at 90% 20%, #182352 0%, transparent 60%),
+              linear-gradient(180deg, var(--bg-2) 0%, var(--bg-1) 100%);
+  overflow: hidden;
+}
+
+/* Container central */
+.wrap {
+  position: relative;
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  isolation: isolate; /* garante que o blur das orbs não "lave" o conteúdo */
+}
+
+/* Cartão com glassmorphism */
+.card {
+  width: min(960px, 92vw);
+  padding: clamp(20px, 4vw, 48px);
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 28px;
+  backdrop-filter: blur(14px) saturate(120%);
+  -webkit-backdrop-filter: blur(14px) saturate(120%);
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.35),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  line-height: 1.15;
+  font-size: clamp(22px, 4.5vw, 42px);
+}
+
+.subtitle {
+  margin: 0 auto;
+  max-width: 70ch;
+  opacity: 0.9;
+  font-weight: 300;
+  font-size: clamp(14px, 2.4vw, 18px);
+}
+
+/* Ornamentos: orbs animadas */
+.orb {
+  position: absolute;
+  filter: blur(40px);
+  opacity: 0.8;
+  border-radius: 50%;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  animation: float 18s ease-in-out infinite;
+}
+.orb.a { width: 500px; height: 500px; background: radial-gradient(circle at 30% 30%, var(--accent-1), transparent 60%); left: -80px; top: -80px; animation-delay: 0s; }
+.orb.b { width: 420px; height: 420px; background: radial-gradient(circle at 60% 40%, var(--accent-2), transparent 60%); right: -60px; top: 20%; animation-delay: 4s; }
+.orb.c { width: 560px; height: 560px; background: radial-gradient(circle at 50% 50%, var(--accent-3), transparent 65%); left: 40%; bottom: -140px; animation-delay: 8s; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) translateX(0) scale(1); }
+  50% { transform: translateY(-24px) translateX(10px) scale(1.04); }
+}
+
+/* Linhas sutis em grade para um toque "tech" */
+.grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 44px 44px, 44px 44px;
+  mask-image: radial-gradient(circle at 50% 50%, black 0%, black 60%, transparent 85%);
+  pointer-events: none;
+}
+
+/* Botão opcional (exemplo) */
+.btn {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 12px 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.25);
+  background: linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.04));
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+  box-shadow: 0 6px 16px rgba(0,0,0,.25);
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0,0,0,.35); }
+.btn:active { transform: translateY(0); }
+
+/* Responsividade e acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+  .orb { animation: none; }
+}
+
+  </style>
 </head>
-<body class="bg-gradient-to-br from-black via-gray-900 to-gray-800 text-white min-h-screen flex flex-col items-center justify-center font-sans transition-all duration-500">
-
-  <!-- Container Principal -->
-  <div id="dashboard" class="w-full max-w-4xl bg-gray-900/70 backdrop-blur-xl rounded-2xl shadow-2xl p-6">
-    <!-- Cabeçalho -->
-    <div class="flex justify-between items-center border-b border-gray-700 pb-4 mb-4">
-      <h1 class="text-3xl font-bold tracking-tight">ScriptHub Dashboard</h1>
-      <button id="uploadBtn" class="px-5 py-2 bg-indigo-600 hover:bg-indigo-700 rounded-lg font-semibold transition-all duration-300">Fazer Upload do Script</button>
-    </div>
-
-    <!-- Tabs -->
-    <div class="flex space-x-4 mb-6">
-      <button id="tabScripts" class="tab-btn text-lg font-medium text-white border-b-2 border-indigo-500 pb-1">Scripts</button>
-      <button id="tabKeys" class="tab-btn text-lg font-medium text-gray-400 hover:text-white transition-all duration-300">Keys</button>
-    </div>
-
-    <!-- Conteúdo Scripts -->
-    <div id="scriptsContent" class="space-y-4">
-      <div class="p-4 bg-gray-800 rounded-xl shadow-inner">
-        <h2 class="text-xl font-semibold">Meus Scripts</h2>
-        <p class="text-gray-400">Nenhum script publicado ainda.</p>
-      </div>
-      <div class="p-4 bg-gray-800 rounded-xl shadow-inner">
-        <h2 class="text-xl font-semibold">Explorar</h2>
-        <ul class="text-gray-300 space-y-1">
-          <li>• Script de movimento rápido</li>
-          <li>• Script de brilho extremo</li>
-          <li>• Script de animações caóticas</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Conteúdo Keys (inativo) -->
-    <div id="keysContent" class="hidden">
-      <p class="text-gray-400 text-center py-8">A aba de Keys ainda não está funcionando.</p>
-    </div>
-  </div>
-
-  <!-- Texto final -->
-  <div id="endMessage" class="hidden text-center text-3xl font-bold">PARABÉNS, NÃO TERMINEI O SITE</div>
-
-  <script>
-    const uploadBtn = document.getElementById("uploadBtn");
-    const dashboard = document.getElementById("dashboard");
-    const endMessage = document.getElementById("endMessage");
-    const tabScripts = document.getElementById("tabScripts");
-    const tabKeys = document.getElementById("tabKeys");
-    const scriptsContent = document.getElementById("scriptsContent");
-    const keysContent = document.getElementById("keysContent");
-
-    // Botão de upload — troca toda a tela
-    uploadBtn.addEventListener("click", () => {
-      dashboard.classList.add("hidden");
-      endMessage.classList.remove("hidden");
-    });
-
-    // Tabs
-    tabScripts.addEventListener("click", () => {
-      tabScripts.classList.add("border-indigo-500", "text-white");
-      tabKeys.classList.remove("border-indigo-500");
-      scriptsContent.classList.remove("hidden");
-      keysContent.classList.add("hidden");
-    });
-
-    tabKeys.addEventListener("click", () => {
-      tabKeys.classList.add("border-indigo-500", "text-white");
-      tabScripts.classList.remove("border-indigo-500");
-      scriptsContent.classList.add("hidden");
-      keysContent.classList.remove("hidden");
-    });
-  </script>
-
+<body>
+  <!-- Ornamentos de fundo -->
+  <div class="orb a" aria-hidden="true"></div>
+  <div class="orb b" aria-hidden="true"></div>
+  <div class="orb c" aria-hidden="true"></div>
+  <div class="grid-overlay" aria-hidden="true"></div>  <!-- Conteúdo principal -->  <main class="wrap">
+    <section class="card" role="region" aria-label="Apresentação">
+      <h1>Oi! Você está mexendo em um computador na Happy Code. se quiser saber qm eu sou, eu sou o Wx e eu fiz esse site aq :)</h1>
+      <p class="subtitle">Fundo moderno com glassmorphism, gradientes e orbs animadas em CSS puro.</p>
+      <!-- Botão opcional; pode remover se quiser apenas o título -->
+      <a class="btn" href="#" onclick="alert('Valeu por visitar!'); return false;">Dizer oi 👋</a>
+    </section>
+  </main>
 </body>
 </html>
